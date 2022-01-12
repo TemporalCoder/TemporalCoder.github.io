@@ -1,21 +1,30 @@
 <html>
  <head>
-     <title>UTC AR Test</title>
-  
-<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js">
- 
+     <title>UTC AR Custom Marker Test</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <!-- we import arjs version without NFT but with marker + location based support -->
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
  </head>
  <body style="margin : 0px; overflow: hidden;">
-  
-   <a-scene embedded arjs>
+    <a-scene embedded arjs>
       
-   <a-text  value="Hello" width="6" position="0 -3 0"
-              rotation="0 15 0"></a-text>
+     <a-marker preset="hiro">
+     <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
+      <a-entity
+            position="0 0 0"
+            scale="0.25 0.25 0.25"
+            gltf-model="rusty_robot/scene.gltf"
+        
+      ></a-entity>
+      <a-entity
+            position="0 0 0"
+            scale="0.25 0.25 0.25"
+            gltf-model="utc/scene.gltf"
+        
+      ></a-entity>
+      
+     </a-marker>
      
-     <a-marker preset='custom' url='pattern-test.patt'> 
-       <a-box position='-0.5 -0.5 0' material='color: blue;'></a-box>
-      </a-marker> 
-
         <a-entity camera></a-entity>
 
    </a-scene>
