@@ -3,9 +3,13 @@
  <head>
      <title>UTC AR Test</title>
    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+      <!-- we import arjs version without NFT but with marker + location based support -->
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  
  </head>
  <body>
-   <a-scene>
+   <a-scene embedded arjs>
+    
     <a-gltf-model  position="0 0 -4" rotation="0 0 0" scale="0.1 0.1 0.1" src="Teapot/Teapot.gltf"></a-gltf-model>
     
      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
