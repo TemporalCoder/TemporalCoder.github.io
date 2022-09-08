@@ -4,8 +4,20 @@
    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
  </head>
  <body>
+  
+  
    <a-scene>
-    <a-gltf-model  position="0 3 -4" rotation="0 0 0" scale="2 2 2" src="Temp/crucible2.gltf" animation-mixer></a-gltf-model>
+    
+      <a-assets>
+    <a-asset-item id="tree" src="Temp/crucible2.gltf"></a-asset-item>
+  </a-assets>
+
+  <a-entity gltf-model="#tree"></a-entity>
+    
+    
+    
+    <a-entity gltf-model="#tree" animation-mixer></a-entity>#
+    
     
      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
      <a-sky color="#ECECEC"></a-sky>
