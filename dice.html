@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>
+        DICE!!!
+    </title>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+
+</head>
+
+<body>
+<h1>Roll Dice</h1> 
+
+
+DICE ROLL: <input type="text" id = "dice1" value ="1">
+<button onclick="rollDiceD6()"> ROll ME </button>
+
+<script>
+function rollDiceD6()
+{
+ var dice1 = Math.floor((Math.random()*6)+1)
+ document.getElementById("dice1").value = dice1;
+}
+
+</script>
+
+
+</body>
+</html>
